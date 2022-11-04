@@ -260,7 +260,9 @@ ul.contacts .item + .item {
     pointer-events: none;
 }
 .button-close {
+    position: absolute;
     display: flex;
+
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -270,12 +272,9 @@ ul.contacts .item + .item {
     right: 8px;
     top: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);;
-    position: absolute;
-    margin-right: 0;
    
 }
 .icon-close-button {
-    
     left: 50%;
     top: 50%;
 }
