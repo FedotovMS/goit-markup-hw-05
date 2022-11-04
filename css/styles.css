@@ -105,6 +105,8 @@ body {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.02em;
+
+    position: relative;
 }
 .site-nav a:hover {
     color: var(--link-hover-color);
@@ -112,6 +114,18 @@ body {
 }
 .site-nav .current {
     color: var(--link-hover-color);
+}
+.site-nav .current::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--link-hover-color);
 }
 .site-nav a:focus {
     color:var(--link-hover-color);
