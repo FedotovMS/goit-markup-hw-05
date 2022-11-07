@@ -4,6 +4,7 @@
     --primary-link-color: #212121;
     --link-hover-color: #2196f3;
     --animation-speed:250ms;
+    --timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container {
     width: 1200px;
@@ -108,10 +109,17 @@ body {
     letter-spacing: 0.02em;
 
     position: relative;
+   
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
+
 }
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav a:focus {
     color: var(--link-hover-color);
     text-decoration: none;
+    
 }
 .site-nav .current {
     color: var(--link-hover-color);
@@ -135,6 +143,7 @@ body {
 ul.contacts {
 color: var(--primary-text-color);
 list-style-type: none;
+
 }
 
 ul.contacts>li {
@@ -162,6 +171,9 @@ ul.contacts .item + .item {
     color: var(--primary-text-color);
     text-decoration: none;
     display: flex;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing); 
 }
 .cont-links:hover {
     color: var(--link-hover-color);
@@ -231,6 +243,7 @@ ul.contacts .item + .item {
     text-align: center;
     border: transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 }
 /* модальне вікно */
 .backdrop {
@@ -294,6 +307,7 @@ ul.contacts .item + .item {
     align-items: center;
     margin-bottom: 30px;
     border-radius: 4px;
+    
 }
 .page ul {
     /* display: inline-block; */
@@ -480,6 +494,10 @@ ul.contacts .item + .item {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 .social-link:hover,
 .social-link:focus {
@@ -520,7 +538,11 @@ ul.contacts .item + .item {
     color: #AFB1B8;
     width: 170px;
     height: 92px;
-    border-radius: 4px
+    border-radius: 4px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -558,6 +580,10 @@ ul.contacts .item + .item {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     border-radius: 50%;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 .social-link-footer:hover,
 .social-link-footer:focus {
@@ -648,6 +674,10 @@ address {
     border-radius: 4px;
     border: 0;
     padding: 6px 25px 6px 25px;
+   
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 .filter .item + .item {
     margin-left: 8px;
@@ -660,6 +690,7 @@ address {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
     0px 1px 2px rgba(0, 0, 0, 0.08), 
     0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 button {
     cursor: pointer;
