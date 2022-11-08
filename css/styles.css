@@ -118,7 +118,7 @@ body {
 .site-nav a:hover,
 .site-nav a:focus {
     color: var(--link-hover-color);
-    text-decoration: none;
+    /* text-decoration: none; */
     
 }
 .site-nav .current {
@@ -135,9 +135,20 @@ body {
     height: 4px;
     border-radius: 2px;
     background-color: var(--link-hover-color);
+    
+
+    transition: color var(--animation-speed) var(--timing);
 }
-.site-nav a:focus {
+/* .site-nav a:focus {
     color:var(--link-hover-color);
+} */
+.site-nav .current::after
+.site-nav a:hover,
+.site-nav a:focus {
+    color: var(--link-hover-color);
+    
+    /* text-decoration: none; */
+
 }
 /* contacts */
 ul.contacts {
@@ -268,11 +279,15 @@ ul.contacts .item + .item {
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px; 
     
-    transition: opacity 250ms linear, visibility 250ms linear; 
+    transition-property: box-shadow, opacity, transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
+    
 }
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    box-shadow: none;
 }
 .button-close {
     position: absolute;
